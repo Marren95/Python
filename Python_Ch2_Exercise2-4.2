@@ -1,4 +1,33 @@
+#How to determine the price of shipping and wholesale products to a distributer
 
+kit_price = 73.95
+nmb_kits = 73
+
+def shpng_cst(nmb_kits):
+    if nmb_kits >= 10 and nmb_kits <= 19:
+        return (27.6 + (nmb_kits - 8) * 5.69)
+    if nmb_kits >= 20 and nmb_kits <= 29:
+        return (27.6 + (nmb_kits - 13) * 5.69)
+    if nmb_kits >= 30 and nmb_kits <= 39:
+        return (27.6 + (nmb_kits - 28) * 5.69)
+    if nmb_kits >= 40 and nmb_kits <= 49:
+        return (27.6 + (nmb_kits - 33) * 5.69)
+    if nmb_kits >= 50 and nmb_kits <= 59:
+        return (27.6 + (nmb_kits - 38) * 5.69)
+    if nmb_kits >= 60 and nmb_kits <= 69:
+        return (27.6 + (nmb_kits - 43) * 5.69)
+    if nmb_kits >= 70 and nmb_kits <= 79:
+        return (27.6 + (nmb_kits -48) * 5.69)
+    if nmb_kits >= 80 and nmb_kits <= 89:
+        return (27.6 + (nmb_kits - 53) * 5.69)
+    if nmb_kits >= 90 and nmb_kits <= 99:
+        return (27.6 + (nmb_kits - 58) * 5.69)
+    if nmb_kits <= 3:
+        return (nmb_kits * 9.2)
+    else:
+        return (27.6 + (nmb_kits - 3) * 5.69)
+
+def whl_sale(nmb_kits):
     if nmb_kits >= 10 and nmb_kits <= 19:
         return ((nmb_kits - 1) * kit_price)
     if nmb_kits >= 20 and nmb_kits <= 29:
