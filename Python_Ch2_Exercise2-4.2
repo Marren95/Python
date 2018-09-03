@@ -1,0 +1,34 @@
+
+    if nmb_kits >= 10 and nmb_kits <= 19:
+        return ((nmb_kits - 1) * kit_price)
+    if nmb_kits >= 20 and nmb_kits <= 29:
+        return ((nmb_kits - 2) * kit_price)
+    if nmb_kits >= 30 and nmb_kits <= 39:
+        return ((nmb_kits - 3) * kit_price)
+    if nmb_kits >= 40 and nmb_kits <= 49:
+        return ((nmb_kits - 4) * kit_price)
+    if nmb_kits >= 50 and nmb_kits <= 59:
+        return ((nmb_kits - 5) * kit_price)
+    if nmb_kits >= 60 and nmb_kits <= 69:
+        return ((nmb_kits - 6) * kit_price)
+    if nmb_kits >= 70 and nmb_kits <= 79:
+        return ((nmb_kits - 7) * kit_price)
+    if nmb_kits >= 80 and nmb_kits <= 89:
+        return ((nmb_kits - 8) * kit_price)
+    if nmb_kits >= 90 and nmb_kits <= 99:
+        return ((nmb_kits - 9) * kit_price)
+    else:
+        return (nmb_kits(kit_price))
+
+def fnl_price(nmb_kits):
+    return ((whl_sale(nmb_kits) * 0.8) + (shpng_cst(nmb_kits)))
+
+print("You are ordering", nmb_kits, "kits")
+
+print("The price of model kits are $",kit_price)
+
+print("The price of shipping", nmb_kits, "model kits is $",shpng_cst(nmb_kits))
+
+print("The price of ordering", nmb_kits, "model kits with 1 free model kit for every 10 orders is $",whl_sale(nmb_kits))
+
+print("The total cost of your order will be $",fnl_price(nmb_kits), "with a %20 discount, excluding shipping fee")
