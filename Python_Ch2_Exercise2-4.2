@@ -1,7 +1,7 @@
 #How to determine the price of shipping and wholesale products to a distributer
 
 kit_price = 73.95
-nmb_kits = 73
+nmb_kits = int(input("How many model kits would you like to order?"))
 
 def shpng_cst(nmb_kits):
     if nmb_kits >= 10 and nmb_kits <= 19:
@@ -47,7 +47,7 @@ def whl_sale(nmb_kits):
     if nmb_kits >= 90 and nmb_kits <= 99:
         return ((nmb_kits - 9) * kit_price)
     else:
-        return (nmb_kits(kit_price))
+        return (nmb_kits * kit_price)
 
 def fnl_price(nmb_kits):
     return ((whl_sale(nmb_kits) * 0.8) + (shpng_cst(nmb_kits)))
@@ -56,8 +56,8 @@ print("You are ordering", nmb_kits, "kits")
 
 print("The price of model kits are $",kit_price)
 
-print("The price of shipping", nmb_kits, "model kits is $",shpng_cst(nmb_kits))
+print("The price of shipping", nmb_kits, "model kits is $",round(shpng_cst(nmb_kits), 2))
 
 print("The price of ordering", nmb_kits, "model kits with 1 free model kit for every 10 orders is $",whl_sale(nmb_kits))
 
-print("The total cost of your order will be $",fnl_price(nmb_kits), "with a %20 discount, excluding shipping fee")
+print("The total cost of your order will be $",round(fnl_price(nmb_kits), 2), "with a %20 discount, excluding shipping fee")
