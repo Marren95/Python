@@ -1,0 +1,22 @@
+#var1, var2, var3 = input("df").split(",")
+#print(var1,var2,var3) multiple input
+
+hour_leave = int(input("What time are you leaving?(in hours)"))
+minute_leave = int(input("and around what minutes(s)?"))
+pace_miles = int(input("How many miles are you running in pace?"))
+tempo_miles = int(input("How many miles are you running in tempo?"))
+
+hour_l = hour_leave
+minute_l = minute_leave / 60
+run_pace = (pace_miles * (8 + 15 / 60) / 60)
+run_tempo = (tempo_miles * (7 + 12 / 60) / 60)
+run_time = run_pace + run_tempo
+start_time = hour_l + minute_l
+added_time = start_time + run_time
+final_min = (added_time - int(added_time))
+final_hour = added_time - final_min
+absolute_min = final_min * 60
+
+print("The final time was %d:%d" %(final_hour,absolute_min))
+
+#print(hour_leave,":", minute_leave)
