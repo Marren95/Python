@@ -1,0 +1,64 @@
+def print_bar():
+    print ('+ - - - - ', end='')
+
+def print_col():
+    print ('|         ', end='')
+
+def print_twice(t):
+    t()
+    t()
+
+def print_four(t):
+    print_twice(t)
+    print_twice(t)
+
+def part_bar():
+    print_twice(print_bar)
+    print('+')
+
+def part_col():
+    print_twice(print_col)
+    print('|')
+
+def col_part():
+    print_twice(part_col)
+    print_twice(part_col)
+
+def print_sec():
+    part_bar()
+    col_part()
+
+def print_sec2():
+    print_twice(print_sec)
+
+def print_grid():
+    print_sec2()
+    part_bar()
+
+def print_bar4x4():
+    print_four(print_bar)
+
+def print_col4x4():
+    print_four(print_col)
+
+def final_bar4x4():
+    print_bar4x4()
+    print('+')
+
+def final_col4x4():
+    print_col4x4()
+    print('|')
+
+def print_sec4x4():
+    final_bar4x4()
+    print_four(final_col4x4)
+
+def print_4x4():
+    print_four(print_sec4x4)
+    final_bar4x4()
+
+print_grid()
+
+print('________________________________________________')
+
+print_4x4()
