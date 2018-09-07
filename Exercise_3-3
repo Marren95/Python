@@ -1,0 +1,19 @@
+len('allen')
+print(len('allen')*5)
+
+#def right_justify(s):
+    #print (' '*(70-len(s))+s)
+
+#right_justify('allen')
+
+#def indentator(s):
+    #print (' '*(23-len(s))+s)
+
+#indentator('haha')
+
+s = str(input("Type something just to put a fuckton of indentations in front of it, specifically the last str is at the 70th space"))
+
+def right_justify(s):
+    print (' '*(70-len(s))+s)
+
+print(right_justify(s))
