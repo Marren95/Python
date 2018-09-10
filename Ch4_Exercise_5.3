@@ -1,0 +1,17 @@
+
+def check_fermat (a, b, c, n):
+    if n <= 2:
+        print('Try again!')
+    if a**n + b**n == c**n:
+        print ("Holy smokes, Fermatt was wrong!")
+    else:
+        print ("No, that doesn't work.")
+
+def inter_input():
+    a = int(input("What would you like 'a' to be?\n"))
+    b = int(input('"b"?\n'))
+    c = int(input('"c"?\n'))
+    n = int(input('raised to what power? (Can only be raised by greater than 2)\n'))
+    check_fermat(a, b, c, n)
+
+inter_input()
