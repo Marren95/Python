@@ -15,9 +15,9 @@ def is_triangle(a, b, c):
         return
 
 def int_input():
-    a = int(input("What measurement would you like 'a' to be?"))
-    b = int(input("'b'?"))
-    c = int(input("'c'?"))
+    a = int(input("What measurement would you like 'a' to be?\n"))
+    b = int(input("'b'?\n"))
+    c = int(input("'c'?\n"))
     is_triangle(a, b, c)
 
-is_triangle(12, 32, 13)
+int_input()
