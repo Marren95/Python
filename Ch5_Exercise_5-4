@@ -1,0 +1,23 @@
+def is_triangle(a, b, c):
+    if a <= b + c:
+        print ('Yes')
+    if b <= a + c:
+        print ('Yes')
+    if c <= a + b:
+        print ('Yes')
+    if a > b + c:
+        print ('No')
+    if b > a + c:
+        print ('No')
+    if c > a + b:
+        print ('No')
+    else:
+        return
+
+def int_input():
+    a = int(input("What measurement would you like 'a' to be?"))
+    b = int(input("'b'?"))
+    c = int(input("'c'?"))
+    is_triangle(a, b, c)
+
+is_triangle(12, 32, 13)
